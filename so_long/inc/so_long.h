@@ -71,5 +71,21 @@ char	*get_next_line(int fd);
 char	*ft_strjoin(char *s1, char *s2);
 char	*ft_strchr(const char *s, int c);
 char	*ft_itoa(int n);
+void	move_w(t_list *d);
+void	move_s(t_list *d);
+void	move_a(t_list *d);
+void	move_d(t_list *d);
+void	check_start_line(t_list *d);
+void	check_fst_line(t_list *d);
+void	checkline(t_list *d);
+void	calc_xy(char r, int i, t_list *d);
+void	put_sprite(t_list *d, char tile, int x, int y);
+char	*copy_map(t_list *d);
+int		find_player_position(t_list *d);
+void	flood_fill(char *map, int pos, int width, int height, 
+					int *collectibles, int *exit_found);
+void	check_flood_results(t_list *d, char *map_copy, 
+						int collectibles_found, int exit_found);
+char	*ft_substr(char const *s, unsigned int start, int len);
 
 #endif

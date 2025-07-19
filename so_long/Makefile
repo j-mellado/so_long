@@ -3,7 +3,9 @@ NAME = so_long
 SRCS = ./src/so_long.c ./src/read_map.c ./src/print_map.c ./src/get_next_line.c \
 			./src/get_next_line_utils.c ./src/key_press.c ./src/check_exit.c \
 			./src/ft_free.c ./src/ft_itoa.c ./src/ft_calloc.c ./src/ft_bzero.c \
-			./src/ft_memset.c ./src/ft_error.c ./src/map_validator.c
+			./src/ft_memset.c ./src/ft_error.c ./src/map_validator.c \
+			./src/map_checker.c ./src/player_movement.c ./src/string_utils.c \
+			./src/path_validator.c
 
 INCLUD = ./inc/so_long.h \
 			./mlx/mlx.h

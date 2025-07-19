@@ -44,44 +44,6 @@ int	find_player_position(t_list *d)
 	return (-1);
 }
 
-void	flood_fill(char *map, int pos, int width, int height, int *collectibles, int *exit_found)
-{
-	if (pos < 0 || pos >= width * height)
-		return;
-
-	if (map[pos] == '\n' || map[pos] == '1' || map[pos] == 'V')
-		return;
-
-	if (map[pos] == 'C')
-		(*collectibles)++;
-	if (map[pos] == 'E')
-		*exit_found = 1;
-	map[pos] = 'V';
-
-	if (pos % width > 0)
-		flood_fill(map, pos - 1, width, height, collectibles, exit_found);
-	if (pos % width < width - 2)
-		flood_fill(map, pos + 1, width, height, collectibles, exit_found);
-	if (pos >= width)
-		flood_fill(map, pos - width, width, height, collectibles, exit_found);
-	if (pos < width * (height - 1))
-		flood_fill(map, pos + width, width, height, collectibles, exit_found);
-}
-
-void	check_flood_results(t_list *d, char *map_copy, int collectibles_found, int exit_found)
-{
-	if (collectibles_found != d->consum)
-	{
-		free(map_copy);
-		ft_error(d, 12);
-	}
-	if (!exit_found)
-	{
-		free(map_copy);
-		ft_error(d, 13);
-	}
-}
-
 void	validate_map_path(t_list *d)
 {
 	char	*map_copy;
@@ -95,7 +57,8 @@ void	validate_map_path(t_list *d)
 		ft_error(d, 11);
 	collectibles_found = 0;
 	exit_found = 0;
-	flood_fill(map_copy, player_pos, d->width_l, d->height_l, &collectibles_found, &exit_found);
+	flood_fill(map_copy, player_pos, d->width_l, d->height_l, 
+				&collectibles_found, &exit_found);
 	check_flood_results(d, map_copy, collectibles_found, exit_found);
 	free(map_copy);
 }
