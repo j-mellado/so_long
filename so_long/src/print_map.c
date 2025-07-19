@@ -18,8 +18,8 @@ void	calc_xy(char r, int i, t_list *d)
 	int	x_;
 	int	y_;
 
-	y_ = (i / d->width_l) * 50;
-	x_ = (i % d->width_l) * 50;
+	y_ = (i / d->width_l) * 128;
+	x_ = (i % d->width_l) * 128;
 	if (d->errors == 0)
 	{
 		if (r == 'C')

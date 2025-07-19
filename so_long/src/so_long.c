@@ -30,10 +30,10 @@ void	init_img(t_list *d)
 	int	w;
 	int	h;
 
-	w = 50;
-	h = 50;
-	d->y = (ft_strlen(d->big_line) / d->width_l + 1) * 50;
-	d->x = (d->width_l - 1) * 50;
+	w = 128;
+	h = 128;
+	d->y = (ft_strlen(d->big_line) / d->width_l + 1) * 128;
+	d->x = (d->width_l - 1) * 128;
 	d->bush = mlx_xpm_file_to_image(d->mlx, "img/bush.xpm", &w, &h);
 	d->fond = mlx_xpm_file_to_image(d->mlx, "img/fond.xpm", &w, &h);
 	d->poke = mlx_xpm_file_to_image(d->mlx, "img/poke.xpm", &w, &h);
