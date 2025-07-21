@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jmellado <jmellado@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/20 23:27:21 by marvin            #+#    #+#             */
-/*   Updated: 2022/07/08 12:07:11 by gemartin         ###   ########.fr       */
+/*   Created: 2025/07/21 10:12:04 by jmellado          #+#    #+#             */
+/*   Updated: 2025/07/21 10:45:22 by jmellado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	check_map_extension(char *map, t_list *d)
 	int	i;
 
 	i = ft_strlen(map);
-	if (i > 2 && map[i - 4] == '.' && map[i - 3] == 'b'
-		&& map[i - 2] == 'e' && map[i - 1] == 'r')
+	if (i > 2 && map[i - 4] == '.' && map[i - 3] == 'b' && map[i - 2] == 'e'
+		&& map[i - 1] == 'r')
 		;
 	else
 		ft_error(d, 6);
@@ -30,10 +30,10 @@ void	init_img(t_list *d)
 	int	w;
 	int	h;
 
-	w = 50;
-	h = 50;
-	d->y = (ft_strlen(d->big_line) / d->width_l + 1) * 50;
-	d->x = (d->width_l - 1) * 50;
+	w = 128;
+	h = 128;
+	d->y = (ft_strlen(d->big_line) / d->width_l + 1) * 128;
+	d->x = (d->width_l - 1) * 128;
 	d->bush = mlx_xpm_file_to_image(d->mlx, "img/bush.xpm", &w, &h);
 	d->fond = mlx_xpm_file_to_image(d->mlx, "img/fond.xpm", &w, &h);
 	d->poke = mlx_xpm_file_to_image(d->mlx, "img/poke.xpm", &w, &h);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   player_movement.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmellado <jmellado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jmellado <jmellado@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 00:00:00 by jmellado          #+#    #+#             */
-/*   Updated: 2025/07/19 00:00:00 by jmellado         ###   ########.fr       */
+/*   Updated: 2025/07/21 10:10:19 by jmellado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

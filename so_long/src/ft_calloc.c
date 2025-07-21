@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gemartin <gemartin@student.42barc...>      +#+  +:+       +#+        */
+/*   By: jmellado <jmellado@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/20 16:22:04 by gemartin          #+#    #+#             */
-/*   Updated: 2022/05/12 16:47:08 by marvin           ###   ########.fr       */
+/*   Created: 2025/07/21 10:13:58 by jmellado          #+#    #+#             */
+/*   Updated: 2025/07/21 10:14:00 by jmellado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	*ft_calloc(size_t count, size_t size)
 	bzero = (void *)malloc(count * size);
 	if (!bzero)
 		return (0);
-	ft_bzero (bzero, count * size);
+	ft_bzero(bzero, count * size);
 	return (bzero);
 }

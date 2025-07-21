@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   read_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jmellado <jmellado@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/22 10:39:46 by marvin            #+#    #+#             */
-/*   Updated: 2022/05/20 00:51:05 by marvin           ###   ########.fr       */
+/*   Created: 2025/07/21 10:12:14 by jmellado          #+#    #+#             */
+/*   Updated: 2025/07/21 10:12:20 by jmellado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/so_long.h"
-
-
 
 void	process_line(t_list *d, char *line)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gemartin <gemartin@student.42barc...>      +#+  +:+       +#+        */
+/*   By: jmellado <jmellado@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/07 00:41:32 by gemartin          #+#    #+#             */
-/*   Updated: 2022/05/19 19:16:59 by marvin           ###   ########.fr       */
+/*   Created: 2025/07/21 10:11:30 by jmellado          #+#    #+#             */
+/*   Updated: 2025/07/21 10:15:33 by jmellado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*readbuf(int fd, char *line)
 	buffer[0] = '\0';
 	while (r > 0 && !ft_strchr(buffer, '\n'))
 	{
-		r = read (fd, buffer, 1);
+		r = read(fd, buffer, 1);
 		if (r == -1)
 		{
 			free(buffer);
@@ -48,6 +48,6 @@ char	*get_next_line(int fd)
 	line2 = NULL;
 	if (fd < 0)
 		return (NULL);
-	line = readbuf (fd, line2);
+	line = readbuf(fd, line2);
 	return (line);
 }
