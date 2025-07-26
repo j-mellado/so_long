@@ -6,7 +6,7 @@
 /*   By: jmellado <jmellado@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 10:14:29 by jmellado          #+#    #+#             */
-/*   Updated: 2025/07/21 10:22:59 by jmellado         ###   ########.fr       */
+/*   Updated: 2025/07/26 19:06:48 by jmellado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ typedef struct s_list
 	int		player;
 	int		height_l;
 	int		width_l;
+	int		exit_pos;
 	char	*big_line;
 }			t_list;
 
@@ -69,6 +70,8 @@ int			ft_strlen(const char *s);
 int			key_press(int key, t_list *d);
 int			check_exit(t_list *d, char letter);
 int			ft_free(t_list *d);
+void		find_exit_position(t_list *d);
+void		restore_exit_if_needed(t_list *d, int old_pos);
 void		print_map(t_list *d);
 void		read_map(char *map, t_list *d);
 void		validate_map_path(t_list *d);

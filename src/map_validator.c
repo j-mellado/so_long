@@ -6,7 +6,7 @@
 /*   By: jmellado <jmellado@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 00:00:00 by jmellado          #+#    #+#             */
-/*   Updated: 2025/07/21 10:26:13 by jmellado         ###   ########.fr       */
+/*   Updated: 2025/07/21 11:28:18 by jmellado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ int	find_player_position(t_list *d)
 
 void	validate_map_path(t_list *d)
 {
-	char		*map_copy;
-	int			player_pos;
+	char			*map_copy;
+	int				player_pos;
 	t_flood_data	data;
 
 	map_copy = copy_map(d);

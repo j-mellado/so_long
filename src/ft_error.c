@@ -6,7 +6,7 @@
 /*   By: jmellado <jmellado@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 10:13:47 by jmellado          #+#    #+#             */
-/*   Updated: 2025/07/21 10:13:50 by jmellado         ###   ########.fr       */
+/*   Updated: 2025/07/26 18:43:20 by jmellado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	ft_error2(int num)
 		write(1, "No se pueden alcanzar todos los coleccionables.\n", 49);
 	if (num == 13)
 		write(1, "No se puede alcanzar la salida.\n", 33);
+	if (num == 14)
+		write(1, "Error al leer el archivo del mapa\n", 35);
 }
 
 void	ft_error(t_list *d, int num)

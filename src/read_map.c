@@ -6,7 +6,7 @@
 /*   By: jmellado <jmellado@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 10:12:14 by jmellado          #+#    #+#             */
-/*   Updated: 2025/07/21 10:12:20 by jmellado         ###   ########.fr       */
+/*   Updated: 2025/07/26 18:20:03 by jmellado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	read_map(char *map, t_list *d)
 		d->height_l++;
 		line = get_next_line(fd);
 		if (!line)
-			ft_error(d, 9);
+			ft_error(d, 14);
 		process_line(d, line);
 		if (line)
 			free(line);

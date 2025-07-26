@@ -6,7 +6,7 @@
 /*   By: jmellado <jmellado@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 10:12:04 by jmellado          #+#    #+#             */
-/*   Updated: 2025/07/21 10:45:22 by jmellado         ###   ########.fr       */
+/*   Updated: 2025/07/26 19:06:48 by jmellado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	check_map_extension(char *map, t_list *d)
 	int	i;
 
 	i = ft_strlen(map);
-	if (i > 2 && map[i - 4] == '.' && map[i - 3] == 'b' && map[i - 2] == 'e'
+	if (i >= 4 && map[i - 4] == '.' && map[i - 3] == 'b' && map[i - 2] == 'e'
 		&& map[i - 1] == 'r')
 		;
 	else
@@ -67,6 +67,7 @@ int	init_data(t_list *d, char *map)
 	d->moves = 0;
 	check_map_extension(map, d);
 	read_map(map, d);
+	find_exit_position(d);
 	validate_map_path(d);
 	init_img(d);
 	d->win = mlx_new_window(d->mlx, d->x, d->y, "so_long");

@@ -6,7 +6,7 @@
 /*   By: jmellado <jmellado@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 00:00:00 by jmellado          #+#    #+#             */
-/*   Updated: 2025/07/21 10:10:19 by jmellado         ###   ########.fr       */
+/*   Updated: 2025/07/26 19:01:53 by jmellado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	move_w(t_list *d)
 		d->moves++;
 		if (d->big_line[i - d->width_l] == 'C')
 			d->consum--;
-		d->big_line[i] = '0';
+		restore_exit_if_needed(d, i);
 		d->big_line[i - d->width_l] = 'P';
 	}
 	print_map(d);
@@ -45,7 +45,7 @@ void	move_s(t_list *d)
 		d->moves++;
 		if (d->big_line[i + d->width_l] == 'C')
 			d->consum--;
-		d->big_line[i] = '0';
+		restore_exit_if_needed(d, i);
 		d->big_line[i + d->width_l] = 'P';
 	}
 	print_map(d);
@@ -63,7 +63,7 @@ void	move_a(t_list *d)
 		d->moves++;
 		if (d->big_line[i - 1] == 'C')
 			d->consum--;
-		d->big_line[i] = '0';
+		restore_exit_if_needed(d, i);
 		d->big_line[i - 1] = 'P';
 	}
 	print_map(d);
@@ -81,7 +81,7 @@ void	move_d(t_list *d)
 		d->moves++;
 		if (d->big_line[i + 1] == 'C')
 			d->consum--;
-		d->big_line[i] = '0';
+		restore_exit_if_needed(d, i);
 		d->big_line[i + 1] = 'P';
 	}
 	print_map(d);
